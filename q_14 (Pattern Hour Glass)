@@ -1,0 +1,62 @@
+import java.util.*;
+public class q14 {
+    public static void main(String args[]) {
+
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        if (n < 1 || n > 20) {
+            System.out.println("Invalid input. Please enter a number between 1 and 20.");
+            return;
+        }
+
+        for (int i = 0; i <= n; i++) {
+            // Print leading spaces
+            for (int j = 0; j < i; j++) {
+                System.out.print("  ");
+            }
+
+            // Print decreasing values
+            for (int j = n - i; j >= 0; j--) {
+                if (j != 0) {
+                    System.out.print(j + " ");
+                } else {
+                    System.out.print(j);
+                }
+            }
+
+            // Print increasing values
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" " + j);
+            }
+
+            // Move to the next line
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 0; i--) {
+            // Print leading spaces
+            for (int j = 0; j < i; j++) {
+                System.out.print("  ");
+            }
+
+            // Print decreasing values
+            for (int j = n - i; j >= 0; j--) {
+                if (j != 0) {
+                    System.out.print(j + " ");
+                } else {
+                    System.out.print(j);
+                }
+            }
+
+            // Print increasing values
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" " + j);
+            }
+
+            // Move to the next line
+            System.out.println();
+        }
+    }
+}
+
+
